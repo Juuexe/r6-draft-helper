@@ -40,7 +40,7 @@ Do not assume every file named “S5” is the same season. Ubisoft’s [Data Pe
 5. Convert the raw player rows to one row per round:
 
    ```powershell
-   python prepare_rounds.py data\dataDump_S5.csv --output data\rounds.csv --sample 200000
+   python prepare_rounds.py "data\raw\*.csv" --output data\rounds.csv --sample 200000
    ```
 
    `--sample 200000` makes an initial model from a random 10% scan subset capped at 200,000 rounds. Omit it to process every round; this takes considerably longer and can use substantial disk space. DuckDB uses `work\duckdb_temp` for temporary spill files. Increase `--memory-limit` only if your computer has enough free memory.
