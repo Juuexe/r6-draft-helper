@@ -51,7 +51,7 @@ if model is None:
 
 operators = model["operators"]
 operators_by_side = model["operators_by_side"]
-display_name = lambda op: "IQ" if op == "IQ" else op.title()
+display_name = lambda op: {"IQ": "IQ", "RESERVE": "Recruit"}.get(op, op.title())
 st.caption(f"Model data: {model.get('data_label', 'unspecified')} · {len(operators)} operators")
 side = st.radio("Which side has the open slot?", ["Attack", "Defense"], horizontal=True)
 opposite_side = "Defense" if side == "Attack" else "Attack"
