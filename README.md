@@ -1,5 +1,7 @@
 # Rainbow Six Siege Draft Pick Helper
 
+**Try the live app:** [r6-draft-helper.vercel.app](https://r6-draft-helper.vercel.app/)
+
 This is a local browser app that ranks available operators for an open Attack or Defense slot. Drag operator icons into the team boxes, select which side has the open slot, and recommendations appear after its first pick. The app shows only the top three model-supported recommendations. You can generate a randomized five-operator team for the closed side. It reports relative model scores only; it never reports a probability or predicts the match winner.
 
 ## What the score means
