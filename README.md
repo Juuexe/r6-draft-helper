@@ -88,3 +88,4 @@ The first training run is a practical baseline, not a validated competitive mode
 - `train_model.py` — fits logistic regression and writes `model/model.json`.
 - `model/model.json` — generated coefficients; created only after training.
 
+I plan to update this to the current version of the game when I figure out how to get the data.
