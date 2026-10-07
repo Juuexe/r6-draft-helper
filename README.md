@@ -89,3 +89,16 @@ The first training run is a practical baseline, not a validated competitive mode
 - `model/model.json` — generated coefficients; created only after training.
 
 I plan to update this to the current version of the game when I figure out how to get the data.
+
+## Interface verification
+
+Operator cards support click/tap or Enter/Space to add and remove picks; drag-and-drop remains available. Reset asks for confirmation. Mobile rosters scroll independently. Historical coefficients and scoring decomposition are unchanged.
+
+To rerun the browser flow check, serve the app on port 8501, install `@playwright/cli` in your tooling environment, then run:
+
+```powershell
+playwright-cli open http://127.0.0.1:8501
+playwright-cli run-code --filename=tests/draft-flow.js
+```
+
+The check covers selection, ranking, search, dragging, randomization, capacity, reset, and responsive overflow. Screenshot paths in the check target the task's outputs folder; adjust them for another checkout. For automated dialog checks, execute the function using a normal Playwright page with a dialog handler (the CLI may pause at confirmation dialogs).
